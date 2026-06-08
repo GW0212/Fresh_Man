@@ -299,6 +299,9 @@ body {
   will-change: transform;
 }
 .stage:focus { filter: brightness(1.02); }
+#waflashContainer,
+.waflashCanvas,
+#canvas,
 .stage ruffle-player,
 .stage object,
 .stage embed,
@@ -457,4 +460,32 @@ body {
   .guide-card { width: 100%; }
   .main { padding: 14px; gap: 10px; overflow: visible; }
   .stage-wrap { height: 58vw; min-height: 240px; flex: none; }
+}
+
+
+#waflashContainer, .waflashCanvas, #canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  background: #000;
+  outline: none;
+}
+#waflashStatus {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--fg-muted);
+  text-align: center;
+  pointer-events: none;
+}
+#waflashStatus small {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--fg-dim);
 }
